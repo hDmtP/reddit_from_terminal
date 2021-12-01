@@ -40,6 +40,9 @@ secret = "xxxxxxx"
 ## How to run:
 > python3 display.py
 
+You can update the repo with the following command(in case I update this repo in future)
+>git pull
+
 <br>
 
 ## Feedback
