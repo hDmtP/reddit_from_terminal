@@ -20,6 +20,21 @@ git clone https://github.com/hDmtP/reddit_from_terminal
 cd reddit_from_terminal
 pip install -r requirements.txt
 ```
+- **You need to have a reddit account**
+  - Go to [this](https://www.reddit.com/prefs/apps) link.
+  - scroll to the bottom and click `create app`
+    - select `web app`
+    - give `name`, `description` of ur choice
+    - u can find ur `id` & `secret` there.
+- **Create a new file `.env` in the same directory u installed this repo**
+- Then write ur `id`, `secret` as following
+```
+id = "xxxxxxx"
+secret = "xxxxxxx"
+```
+- Replace the `xxxxxxx` with ur id & secret
+- Save the file and u r all set.
+
 <br>
 
 ## How to run:
