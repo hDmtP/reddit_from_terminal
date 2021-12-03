@@ -28,7 +28,6 @@ def sub_comment_stream():
     for comment in subreddit.stream.comments(skip_existing=True, pause_after=5):
         print("\n\n\n")
         print(f"user:{comment.author}\nid:{comment}\ncomment:{comment.body}")
-        
 
 
 def sub_submission_stream():
@@ -36,7 +35,8 @@ def sub_submission_stream():
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.stream.submissions(skip_existing=True, pause_after=5):
         print("\n\n\n")
-        print(f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}")
+        print(f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n")
+        print(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/")
 
 
 def sub_submissions_hot():
@@ -45,7 +45,8 @@ def sub_submissions_hot():
     limit = int(input("Limit: "))
     for submission in subreddit.hot(limit=limit):
         print("\n\n\n")
-        print(f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}")
+        print(f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n")
+        print(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/")
 
 
 def redditor_stream_comnts():
