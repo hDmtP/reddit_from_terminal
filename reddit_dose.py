@@ -20,8 +20,9 @@ def authenticate():
 reddit = authenticate()
 
 if reddit.read_only:
-    print(fontstyle.apply("\n\n\t\t=======================================\t\t\t", "bold/red/YELLOW_BG"))
-    print(fontstyle.apply("\t\t|| All set, ready to explore Reddit! ||\t\t\t", "bold/white/BLACK_BG"))
+    print("\n")
+    print(fontstyle.apply("\t\t=======================================\t\t\t", "bold/red/YELLOW_BG"))
+    print(fontstyle.apply("\t\t|| Aight!!, Ready to explore Reddit! ||\t", "bold/white/BLACK_BG"))
     print(fontstyle.apply("\t\t=======================================\t\t\t", "bold/red/YELLOW_BG"))
 
 
