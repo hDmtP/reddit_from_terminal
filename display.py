@@ -1,42 +1,43 @@
 from reddit_dose import *
+import fontstyle
 
 
 def choose():
-    choice = int(input("\n\n\n0 -> sub_comment_stream | 1 -> sub_submissions_hot | 2 -> sub_submission_stream | 3 -> redditor_stream_comnts | 4 -> redditor_stream_submissions | 5 -> sub_submissions_top | 6 -> search | 7 -> close(): "))
+    choice = int(input(fontstyle.apply("\n\n\n0 -> sub_comment_stream \n\n 1 -> sub_submissions_hot \n\n 2 -> sub_submission_stream \n\n 3 -> redditor_stream_comnts \n\n 4 -> redditor_stream_submissions \n\n 5 -> sub_submissions_top \n\n 6 -> search \n\n 7 -> close(): ", "bold/Italic/purple/UNDERLINE")))
     if(choice == 0):
         try:
             sub_comment_stream()
         except KeyboardInterrupt:
-            print("\n\tAdios!\n\t")
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/UNDERLINE/YELLOW_BG"))
     elif(choice == 1):
         try:
             sub_submissions_hot()
         except KeyboardInterrupt:
-            print("\n\tAdios!\n\t")
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/UNDERLINE/YELLOW_BG"))
     elif(choice == 2):
         try:
             sub_submission_stream()
         except KeyboardInterrupt:
-            print("\n\tAdios!\n\t")
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/UNDERLINE/YELLOW_BG"))
     elif(choice == 3):
         try:
             redditor_stream_comnts()
         except KeyboardInterrupt:
-            print("\n\tAdios!\n\t")
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/UNDERLINE/YELLOW_BG"))
     elif(choice == 4):
         try:
             redditor_stream_submissions()
         except KeyboardInterrupt:
-            print("\n\tAdios!\n\t")
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/UNDERLINE/YELLOW_BG"))
     elif(choice == 5):
         try:
             sub_submissions_top()
         except KeyboardInterrupt:
-            print("\n\tAdios!\n\t")
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/UNDERLINE/YELLOW_BG"))
     elif(choice == 6):
         try:
             search_sub()
         except KeyboardInterrupt:
-            print("\n\tAdios!\n\t")
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/UNDERLINE/YELLOW_BG"))
 
 choose()
