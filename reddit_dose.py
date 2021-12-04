@@ -1,4 +1,5 @@
 import praw
+import fontstyle
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
@@ -19,9 +20,9 @@ def authenticate():
 reddit = authenticate()
 
 if reddit.read_only:
-    print("\n\n\t\t=======================================\t\t\t")
-    print("\t\t|| All set, ready to explore Reddit! ||\t\t\t")
-    print("\t\t=======================================\t\t\t")
+    print(fontstyle.apply("\n\n\t\t=======================================\t\t\t", "bold/red/YELLOW_BG"))
+    print(fontstyle.apply("\t\t|| All set, ready to explore Reddit! ||\t\t\t", "bold/white/BLACK_BG"))
+    print(fontstyle.apply("\t\t=======================================\t\t\t", "bold/red/YELLOW_BG"))
 
 
 def sub_comment_stream():
@@ -29,7 +30,7 @@ def sub_comment_stream():
     subreddit = reddit.subreddit(sub)
     for comment in subreddit.stream.comments(skip_existing=True, pause_after=5):
         print("\n\n\n")
-        print(f"user:{comment.author}\nid:{comment}\ncomment:{comment.body}")
+        print(fontstyle.apply(f"user:{comment.author}\nid:{comment}\ncomment:{comment.body}", "bold/green"))
 
 
 def sub_submission_stream():
@@ -37,9 +38,9 @@ def sub_submission_stream():
     subreddit = reddit.subreddit(sub)
     for submission in subreddit.stream.submissions(skip_existing=True, pause_after=5):
         print("\n\n\n")
-        print(
-            f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n")
-        print(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/")
+        print(fontstyle.apply(
+            f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n", "bold/green"))
+        print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/", "bold/Italic/cyan/UNDERLINE"))
 
 
 def sub_submissions_hot():
@@ -48,23 +49,23 @@ def sub_submissions_hot():
     limit = int(input("Limit: "))
     for submission in subreddit.hot(limit=limit):
         print("\n\n\n")
-        print(
-            f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n")
-        print(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/")
+        print(fontstyle.apply(
+            f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n", "bold/green"))
+        print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/", "bold/Italic/cyan/UNDERLINE"))
 
 
 def redditor_stream_comnts():
     user = str(input("reddit username: "))
     for comment in reddit.redditor(user).stream.comments():
         print("\n\n\n")
-        print(f"id:{comment}\ncomment:{comment.body}")
+        print(fontstyle.apply(f"id:{comment}\ncomment:{comment.body}", "bold/cyan"))
 
 
 def redditor_stream_submissions():
     user = str(input("reddit username: "))
     for submission in reddit.redditor(user).stream.submissions():
         print("\n\n\n")
-        print(f"id:{submission}\ntitle:{submission.title}")
+        print(fontstyle.apply(f"id:{submission}\ntitle:{submission.title}", "bold/cyan"))
 
 
 def sub_submissions_top():
@@ -73,9 +74,9 @@ def sub_submissions_top():
     limit = int(input("Limit: "))
     for submission in subreddit.top(limit=limit):
         print("\n\n\n")
-        print(
-        f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n")
-        print(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/")
+        print(fontstyle.apply(
+        f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n", "bold/green"))
+        print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/", "bold/Italic/cyan/UNDERLINE"))
 
 
 def search_sub():
@@ -91,17 +92,17 @@ def search_sub():
     for submission in subreddit.hot():
         if findWholeWord(keyword)(str(submission.title)) != None:
             i = i+1
-            print(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/\n\n")
-            print(f"total items found till....: {i}\n\n")
+            print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green/UNDERLINE"))
+            print(fontstyle.apply(f"total items found till....: {i}\n\n", "Italic/yellow"))
 
     for submission in subreddit.new():
         if findWholeWord(keyword)(str(submission.title)) != None:
             i = i+1
-            print(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/\n\n")
-            print(f"total items found till....: {i}\n\n")
+            print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green/UNDERLINE"))
+            print(fontstyle.apply(f"total items found till....: {i}\n\n", "Italic/yellow"))
 
     for submission in subreddit.top():
         if findWholeWord(keyword)(str(submission.title)) != None:
             i = i+1
-            print(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/\n\n")
-            print(f"total items found till....: {i}\n\n")
+            print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green/UNDERLINE"))
+            print(fontstyle.apply(f"total items found till....: {i}\n\n", "Italic/yellow"))
