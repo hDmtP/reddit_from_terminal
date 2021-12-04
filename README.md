@@ -4,7 +4,7 @@
 
 ***stream comments, submissions from subreddits and users across `reddit` right in your terminal***
 
-_Alert!_ : ~~Can't watch media contents(photos, videos, GIFs) in ur terminal.~~ *Its more developer centric so u get the `id` of every submission & post. You can google the `id` for watching the media content.*
+_Alert!_ : ~~Can't watch media contents(photos, videos, GIFs) in ur terminal.~~ *Its more developer centric so u get the `id` of every submission & post. You can google the `id` for watching the media content. Ex- imagine the `id` is `hrpzrt`. Then u will search in quote like this `"hrpzrt"` in the search bar*
 
 <br>
 
