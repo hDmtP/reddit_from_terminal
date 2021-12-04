@@ -21,9 +21,9 @@ reddit = authenticate()
 
 if reddit.read_only:
     print("\n")
-    print(fontstyle.apply("\t\t=======================================\t\t\t", "bold/red/YELLOW_BG"))
-    print(fontstyle.apply("\t\t|| Aight!!, Ready to explore Reddit! ||\t", "bold/white/BLACK_BG"))
-    print(fontstyle.apply("\t\t=======================================\t\t\t", "bold/red/YELLOW_BG"))
+    print(fontstyle.apply("=======================================", "bold/red/YELLOW_BG"))
+    print(fontstyle.apply("|| Aight!!, Ready to explore Reddit! ||", "bold/white/BLACK_BG"))
+    print(fontstyle.apply("=======================================", "bold/red/YELLOW_BG"))
 
 
 def sub_comment_stream():
