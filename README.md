@@ -40,6 +40,13 @@ secret = "xxxxxxx"
 ## How to run:
 > python3 display.py
 
+*Or u can make the `display.py` file executable by the following commands:*
+```
+cd reddit_from_terminal
+chmod +x display.py
+./display.py
+```
+
 You can update the repo with the following command(in case I update this repo in future)
 >git pull
 
