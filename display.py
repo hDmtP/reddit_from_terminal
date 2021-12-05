@@ -8,36 +8,36 @@ def choose():
         try:
             sub_comment_stream()
         except KeyboardInterrupt:
-            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/YELLOW_BG"))
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
     elif(choice == 1):
         try:
             sub_submissions_hot()
         except KeyboardInterrupt:
-            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/YELLOW_BG"))
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
     elif(choice == 2):
         try:
             sub_submission_stream()
         except KeyboardInterrupt:
-            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/YELLOW_BG"))
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
     elif(choice == 3):
         try:
             redditor_stream_comnts()
         except KeyboardInterrupt:
-            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/YELLOW_BG"))
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
     elif(choice == 4):
         try:
             redditor_stream_submissions()
         except KeyboardInterrupt:
-            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/YELLOW_BG"))
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
     elif(choice == 5):
         try:
             sub_submissions_top()
         except KeyboardInterrupt:
-            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/YELLOW_BG"))
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
     elif(choice == 6):
         try:
             search_sub()
         except KeyboardInterrupt:
-            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red/YELLOW_BG"))
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
 
 choose()
