@@ -41,7 +41,7 @@ def sub_submission_stream():
         print("\n\n\n")
         print(fontstyle.apply(
             f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n", "bold/green"))
-        print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/", "bold/Italic/cyan/UNDERLINE"))
+        print(fontstyle.apply(f"Link: https://www.reddit.com/r/{sub}/comments/{submission}/", "bold/Italic/cyan"))
 
 
 def sub_submissions_hot():
@@ -52,7 +52,7 @@ def sub_submissions_hot():
         print("\n\n\n")
         print(fontstyle.apply(
             f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n", "bold/green"))
-        print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/", "bold/Italic/cyan/UNDERLINE"))
+        print(fontstyle.apply(f"Link: https://www.reddit.com/r/{sub}/comments/{submission}/", "bold/Italic/cyan"))
 
 
 def redditor_stream_comnts():
@@ -77,7 +77,7 @@ def sub_submissions_top():
         print("\n\n\n")
         print(fontstyle.apply(
         f"user:{submission.author}\nid:{submission}\ntitle:{submission.title}\n\n", "bold/green"))
-        print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/", "bold/Italic/cyan/UNDERLINE"))
+        print(fontstyle.apply(f"Link: https://www.reddit.com/r/{sub}/comments/{submission}/", "bold/Italic/cyan"))
 
 
 def search_sub():
@@ -93,17 +93,17 @@ def search_sub():
     for submission in subreddit.hot():
         if findWholeWord(keyword)(str(submission.title)) != None:
             i = i+1
-            print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green/UNDERLINE"))
+            print(fontstyle.apply(f"Link: https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green"))
             print(fontstyle.apply(f"total items found till....: {i}\n\n", "Italic/yellow"))
 
     for submission in subreddit.new():
         if findWholeWord(keyword)(str(submission.title)) != None:
             i = i+1
-            print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green/UNDERLINE"))
+            print(fontstyle.apply(f"Link: https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green"))
             print(fontstyle.apply(f"total items found till....: {i}\n\n", "Italic/yellow"))
 
     for submission in subreddit.top():
         if findWholeWord(keyword)(str(submission.title)) != None:
             i = i+1
-            print(fontstyle.apply(f"Link:https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green/UNDERLINE"))
+            print(fontstyle.apply(f"Link: https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green"))
             print(fontstyle.apply(f"total items found till....: {i}\n\n", "Italic/yellow"))
