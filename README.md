@@ -35,6 +35,9 @@ secret = "xxxxxxx"
 - Replace the `xxxxxxx` with ur id & secret
 - Save the file and u r all set.
 
+*Please dont change any other files in this directory or u will face difficulties in updating this repo through `git pull`.
+U can create `.env`, `.txt`, and `.csv` files though.*
+
 <br>
 
 ## How to run:
