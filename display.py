@@ -4,7 +4,8 @@ import fontstyle
 
 
 def choose():
-    choice = int(input(fontstyle.apply("\n\n\n0 -> sub_comment_stream \n\n 1 -> sub_submissions_hot \n\n 2 -> sub_submission_stream \n\n 3 -> redditor_stream_comnts \n\n 4 -> redditor_stream_submissions \n\n 5 -> sub_submissions_top \n\n 6 -> search \n\n 7 -> close(): ", "bold/Italic/purple")))
+    choice = int(input(fontstyle.apply("\n\n\n 0 -> sub_comment_stream \n\n 1 -> sub_submissions_hot \n\n 2 -> sub_submission_stream \n\n 3 -> redditor_stream_comnts \n\n 4 -> redditor_stream_submissions \n\n 5 -> sub_submissions_top \n\n 6 -> search subreddit \n\n 7 -> search comments \n\n 8 -> search an user's comment \n\n 9 -> exit(): ", "bold/Italic/purple")))
+    
     if(choice == 0):
         try:
             sub_comment_stream()
@@ -38,6 +39,16 @@ def choose():
     elif(choice == 6):
         try:
             search_sub()
+        except KeyboardInterrupt:
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
+    elif(choice == 7):
+        try:
+            search_comment()
+        except KeyboardInterrupt:
+            print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
+    elif(choice == 8):
+        try:
+            search_user_comment()
         except KeyboardInterrupt:
             print(fontstyle.apply("\n\tAdios!\n\t", "bold/Italic/red"))
 
