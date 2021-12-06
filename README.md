@@ -2,7 +2,7 @@
 
 <br>
 
-***stream comments, submissions from subreddits and users across `reddit` right in your terminal***
+***stream comments, submissions and search keywords from subreddits and users across `reddit` right in your terminal***
 
 _Alert!_ : ~~Can't watch media contents(photos, videos, GIFs) in ur terminal.~~ *Its more developer centric so u get the `id` of every submission & post. You can google the `id` for watching the media content. Ex- imagine the `id` is `hrpzrt`. Then u will search in quote like this `"hrpzrt"` in the search bar*
 
@@ -38,14 +38,7 @@ secret = "xxxxxxx"
 <br>
 
 ## How to run:
-> python3 display.py
-
-*Or u can make the `display.py` file executable by the following commands:*
-```
-cd reddit_from_terminal
-chmod +x display.py
-./display.py
-```
+> ./display.py
 
 You can update the repo with the following command(in case I update this repo in future)
 >git pull
