@@ -107,3 +107,33 @@ def search_sub():
             i = i+1
             print(fontstyle.apply(f"Link: https://www.reddit.com/r/{sub}/comments/{submission}/\n\n", "bold/Italic/green"))
             print(fontstyle.apply(f"total items found till....: {i}\n\n", "Italic/yellow"))
+
+            
+def search_comment():
+    keyword = str(input("Enter keyword for search: "))
+    sub = str(input("Enter subreddit name: "))
+    i = 0
+    import re
+
+    def findWholeWord(w):
+        return re.compile(r'\b({0})\b'.format(w), flags=re.IGNORECASE).search
+
+    subreddit = reddit.subreddit(sub)
+    for comment in subreddit.stream.comments():
+        if findWholeWord(keyword)(str(comment.body)) != None:
+            i = i+1
+            print(fontstyle.apply(f"\n\nuser:{comment.author}\nid:{comment}\ncomment:{comment.body}\n\n", "bold/darkcyan"))
+            print(fontstyle.apply(f"total items found till....: {i}\n\n", "Italic/yellow"))
+
+
+def search_user_comment():
+    username = str(input("Enter username for search: "))
+    sub = str(input("Enter subreddit name: "))
+    i = 0
+
+    subreddit = reddit.subreddit(sub)
+    for comment in subreddit.stream.comments():
+        if username == str(comment.author):
+            i = i+1
+            print(fontstyle.apply(f"\n\nuser:{comment.author}\nid:{comment}\ncomment:{comment.body}\n\n", "bold/darkcyan"))
+            print(fontstyle.apply(f"total items found till....: {i}\n\n", "Italic/yellow"))
