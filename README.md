@@ -38,7 +38,7 @@ secret = "xxxxxxx"
 <br>
 
 ## How to run:
-> ./display.py
+> ./reddit_dose.py
 
 You can update the repo with the following command(in case I update this repo in future)
 >git pull
